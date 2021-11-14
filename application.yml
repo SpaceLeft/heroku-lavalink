@@ -6,7 +6,7 @@ spring:
     banner-mode: log
 lavalink:
   server:
-    password: "youshallnotpass"
+    password: "DYNAMICPASSWORD"
     sources:
       youtube: true
       bandcamp: true
@@ -17,26 +17,25 @@ lavalink:
       http: true
       local: false
     bufferDurationMs: 400
-    youtubePlaylistLoadLimit: 5
-    playerUpdateInterval: 1
+    youtubePlaylistLoadLimit: 3
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     gc-warnings: true
-    
+
 metrics:
   prometheus:
-    enabled: true
+    enabled: false
     endpoint: /metrics
-    
+
 sentry:
   dsn: ""
-  
+
 logging:
   file:
     max-history: 1
     max-size: 3MB
-  path: ./logs/
-  
+  path: /app/logs/
+
   level:
     root: INFO
     lavalink: INFO
